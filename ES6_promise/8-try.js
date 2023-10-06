@@ -1,7 +1,3 @@
-export default function divideFunction(numerator, denominator) {
-    if (denominator === 0) {
-      throw Error('Cannot divide by 0');
-    }
-  
-    return numerator / denominator;
-  }
+export default function loadBalancer(chinaDownload, USDownload) {
+  return Promise.race([chinaDownload, USDownload]);
+}
